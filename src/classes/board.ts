@@ -5,6 +5,9 @@ import { Position } from "./position";
 export class Board {
     pieces: Array<Array<Piece>> = [];
     enPassant: Position = new Position(-1, -1);
+    fullMoves: number = 1;
+    halfMoves: number = 0;
+    castling: number = 0b1111;
     public getPiece(position: Position): Piece {
         return this.pieces[position.row][position.column];
     }
