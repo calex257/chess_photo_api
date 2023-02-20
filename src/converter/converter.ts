@@ -11,13 +11,13 @@ import { Position } from "../classes/position";
 export function fenToBoard(fen: string): Board {
     const board: Board = new Board();
     const segments: string[] = fen.split(" ");
-    if (segments.length !== 6) {
-        throw new Error("Invalid FEN format");
-    }
+    // if (segments.length !== 6) {
+    //     throw new Error("Invalid FEN format");
+    // }
     const position: string[] = segments[0].split("/");
-    if (position.length !== 8) {
-        throw new Error("Invalid FEN format");
-    }
+    // if (position.length !== 8) {
+    //     throw new Error("Invalid FEN format");
+    // }
     for (let i = 0; i < 8; i++) {
         if (position[i].charAt(0) === "8") {
             continue;
