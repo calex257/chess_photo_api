@@ -21,5 +21,6 @@ format should be the following:
 http://localhost:4200/fen/{Actual FEN string}
 ```
 where the actual FEN string is formed of 8 sections separated by the '/' character.
+
 Additional information cannot be sent via this method at this time and the FEN
 must be valid.
