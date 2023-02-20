@@ -4,7 +4,7 @@ import { Piece } from "../classes/piece";
 
 export async function boardToImage(board: Board, size: number):Promise<Buffer> {
     const pieceSize = size / 8;
-    const arr: Array<Object> = [];
+    const arr: Array<object> = [];
     for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
             if (board.pieces[i][j].type === "E") {

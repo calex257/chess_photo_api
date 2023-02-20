@@ -62,18 +62,18 @@ function translateRow(row: string, layout: Array<Piece>, layoutIndex: number) {
     for (let i = 0; i < row.length; i++) {
         if (row.charCodeAt(i) <= "7".charCodeAt(0)
             && row.charCodeAt(i) >= "0".charCodeAt(0)) {
-            let diff = row.charCodeAt(i) - "0".charCodeAt(0);
+            const diff = row.charCodeAt(i) - "0".charCodeAt(0);
             cursor += diff;
         } else {
             let newPiece: Piece;
             let color: string;
-            let position: Position = new Position(layoutIndex, cursor);
+            const position: Position = new Position(layoutIndex, cursor);
             if (row[i].toUpperCase() === row[i]) {
                 color = "w";
             } else {
                 color = "b";
             }
-            let type = row[i].toLowerCase();
+            const type = row[i].toLowerCase();
             switch (type) {
                 case 'p':
                     newPiece = new Pawn(color, position);

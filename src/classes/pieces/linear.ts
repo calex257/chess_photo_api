@@ -12,7 +12,7 @@ abstract class LinearPiece extends Piece {
     }
     private handleDirections(board: Board, pos: Position[], rowIncrement: number, columnIncrement: number, limit: number) {
         for (let i = 1; i <= limit; i++) {
-            let newPos: Position = new Position(this.position.row + i * rowIncrement,
+            const newPos: Position = new Position(this.position.row + i * rowIncrement,
                 this.position.column + i *columnIncrement);
             if (newPos.isOutsideBounds()) {
                 break;

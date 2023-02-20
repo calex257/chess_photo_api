@@ -9,9 +9,6 @@ export class Pawn extends Piece {
     }
     public getMoves(board: Board): Position[] {
         const pos:Position[] = [];
-        if (this.hasBeenMoved) {
-            
-        }
         return pos;
     }
 }
